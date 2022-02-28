@@ -93,11 +93,11 @@ A summary of the access policies in place can be found in the table below.
 
 | Name    | Publicly Accessible | Permissible IP Addresses |
 |---------|---------------------|--------------------------|
-| Jumpbox | Yes                 | 67.4.39.44               |
+| Jumpbox | Yes                 | xx.x.xx.44               |
 | Web1    | No                  | 10.0.0.4                 |
 | Web2    | No                  | 10.0.0.4                 |
 | Web3    | No                  | 10.0.0.4                 |
-| ELK     | No                  | 67.4.39.44               |
+| ELK     | No                  | xx.x.xx.44               |
 
 ### Elk Configuration
 
@@ -135,7 +135,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the configuration file to Ansible container.
 - Update the hosts file to include the IP address of both ELK and webservers.
-- Run the playbook, and navigate to http://[104.210.50.145]:5601/app/kibana to check that the installation worked as expected.
+- Run the playbook, and navigate to http://104.210.50.145:5601/app/kibana to check that the installation worked as expected.
 
 - _Which file is the playbook? Where do you copy it?_ The configuration file. /etc/ansible/files/filebeat-config.yml to /etc/filebeat/filebeat.yml
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ the filebeat-config.yml file. You need to specify which machines to install it only and update which ip addresses/group the playbook should run on.
