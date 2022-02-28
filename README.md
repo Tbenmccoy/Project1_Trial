@@ -2,11 +2,12 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![alt text](https://github.com/Tbenmccoy/Project1/blob/3585c4fdc8582016b0d3ad2a112db51688de682a/Images/Project1.drawio.png)
+![alt text](/Images/Project1.drawio.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-```---
+```
+---
 - name: Configure Elk VM with Docker
   hosts: elk
   remote_user: azuser
@@ -48,7 +49,8 @@ These files have been tested and used to generate a live ELK deployment on Azure
         published_ports:
           - 5601:5601
           - 9200:9200
-          - 5044:5044```
+          - 5044:5044
+```
 
 This document contains the following details:
 - Description of the Topology
@@ -111,7 +113,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![alt text](https://github.com/Tbenmccoy/Project1/blob/3585c4fdc8582016b0d3ad2a112db51688de682a/Images/Project1.drawio.png)
+![alt text](Images/ELK.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -142,7 +144,8 @@ SSH into the control node and follow the steps below:
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
 ### Filebeat
-```---
+```
+---
 - name: Installing and Launch Filebeat
   hosts: webservers
   become: yes
@@ -177,10 +180,12 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
   - name: Enable service filebeat on boot
     systemd:
       name: filebeat
-      enabled: yes```
+      enabled: yes
+```
 
 ### Metricbeat
-```---
+```
+---
 - name: Install metric beat
   hosts: webservers
   become: true
@@ -215,4 +220,5 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
   - name: enable service metricbeat on boot
     systemd:
       name: metricbeat
-      enabled: yes```
+      enabled: yes
+```
