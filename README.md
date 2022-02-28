@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-!(https://github.com/Tbenmccoy/Project1/blob/3585c4fdc8582016b0d3ad2a112db51688de682a/Images/Project1.drawio.png)
+![alt text](https://github.com/Tbenmccoy/Project1/blob/3585c4fdc8582016b0d3ad2a112db51688de682a/Images/Project1.drawio.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -111,7 +111,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-!(Images/ELK.png)
+![alt text](https://github.com/Tbenmccoy/Project1/blob/adb1a3ca98345f52dec9fbdb494b698cf1684588/Images/ELK.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -135,7 +135,6 @@ SSH into the control node and follow the steps below:
 - Update the hosts file to include the IP address of both ELK and webservers.
 - Run the playbook, and navigate to http://[104.210.50.145]:5601/app/kibana to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_ The configuration file. /etc/ansible/files/filebeat-config.yml to /etc/filebeat/filebeat.yml
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ the filebeat-config.yml file. You need to specify which machines to install it only and update which ip addresses/group the playbook should run on.
 - _Which URL do you navigate to in order to check that the ELK server is running?_ http://104.210.50.145:5601/app/kibana
